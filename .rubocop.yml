@@ -1,3 +1,4 @@
+# このファイルは加筆編集しないでください。
 require:
   - rubocop-rails
 
@@ -13,25 +14,19 @@ AllCops:
 Rails:
   Enabled: true
 
-# 日本語のコメントを許可
 Style/AsciiComments:
   Enabled: false
 
-# モジュール名::クラス名の定義を許可
 Style/ClassAndModuleChildren:
   Enabled: false
 
-# app/controllers以下のメソッドのprefixに「set_」「get_」を許可
 Naming/AccessorMethodName:
   Exclude:
     - "app/controllers/**/*"
 
-# クラスにコメントを残すのを許可
 Style/Documentation:
   Enabled: false
 
-# 以下、初期状態でRubocopに引っかかる項目をスキップさせています。
-# 初期設定で引っかかっている項目
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
