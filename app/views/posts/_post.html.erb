@@ -1,0 +1,8 @@
+<tr>
+  <td><%= post.title %></td>
+  <td><%= post.body %></td>
+  <td>
+    <%= link_to 'Edit', edit_post_path(post), class: 'btn mr-3' %>
+    <%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Really?'}, class: 'btn text-danger' %>
+  </td>
+</tr>

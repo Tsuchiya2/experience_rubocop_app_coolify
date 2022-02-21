@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2022_02_21_122640) do
 
   create_table "posts", force: :cascade do |t|
-    t.string "title", null: false
-    t.text "body", null: false
+    t.string "title", limit: 255, null: false
+    t.text "body", limit: 500, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

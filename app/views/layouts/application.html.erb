@@ -10,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class='app-title navbar navbar-expand-md navbar-light bg-dark'>
+      <%= link_to 'Experience Rubocop App', root_path, class: 'navbar-brand text-white' %>
+    </header>
+    <div class='container'>
+      <%= render 'shared/flash_message' %>
+      <%= yield %>
+    </div>
   </body>
 </html>

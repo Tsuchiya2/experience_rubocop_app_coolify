@@ -1,0 +1,19 @@
+<% if post.errors.present? %>
+  <ul class="bg-light text-dark" >
+    <% post.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with model: post, local: true do |f| %>
+  <div class='form-group'>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :body %>
+    <%= f.text_area :body, maxlength: 500, placeholder: 'Limit 500', class: 'form-control', style: 'height: 300px; resize: none;'  %>
+  </div>
+  <%= f.submit 'Submit', class: 'btn btn-dark' %>
+<% end %>
