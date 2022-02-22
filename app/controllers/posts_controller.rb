@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
- before_action :set_post, only: %i[edit  update  destroy]
+ before_action :set_post, only: %i[edit  update   destroy]
 
   def index
     @posts = Post.all
@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
    if @post.save
-      redirect_to posts_path, notice: 'Create Post.'
+      redirect_to root_path, success: 'Create Post.'
      else
       flash.now[:danger] = 'Error: Not Create Post.'
        render :new
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   end
   def update
       if @post.update(post_params)
-      redirect_to posts_path, success: 'Update Post.'
+      redirect_to root_path, success: 'Update Post.'
       else
       flash.now[:danger] = 'Error: Not Update Post.'
       render :edit
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
     end
   def destroy
    @post.destroy!
-   redirect_to posts_path, success: 'Delete Post.'
+   redirect_to root_path, success: 'Delete Post.'
   end
 
 

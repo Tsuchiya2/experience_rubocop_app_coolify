@@ -1,6 +1,9 @@
 <h1>Posts#index</h1>
 
-<p><%= link_to 'New Post', new_post_path, class: 'btn btn-dark' %></p>
+<div class='d-flex justify-content-between m-2'>
+  <%= link_to 'New Post', new_post_path, class: 'btn btn-dark block' %>
+  <%= link_to 'All Change Posts', change_posts_path, method: :post, class: 'btn btn-dark block text-danger' %>
+</div>
 
 <table class='table table-hober table-striped'>
   <thead class='thead-dark'>
