@@ -113,7 +113,7 @@ $ bundle exec rubocop app/controllers/change_posts_controller.rb
 
 ## 【課題４】 app/models/post.rb
 
-課題４で修正した記載ですが、ロジックに関する記述がControllerに書かれており、望ましい状態ではありません。また、このまま他のアクションを追加実装していくと `Fat Controller` にも成りかねません。ロジック部分をModelへ移行して `Fat Controller` を解消しましょう。
+課題3で修正した記載ですが、ロジックに関する記述がControllerに書かれており、望ましい状態ではありません。また、このまま他のアクションを追加実装していくと `Fat Controller` にも成りかねません。ロジック部分をModelへ移行して `Fat Controller` を解消しましょう。
 
 こちらも課題３と同様にやや難しいかと思うので、同ファイルにヒントになるような記載をコメントアウトで用意しておりますので適宜活用してください。
 
