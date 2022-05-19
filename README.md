@@ -21,6 +21,7 @@ $ cd experience_rubocop_app
 $ git remote rm origin
 $ git checkout -b give_code
 $ rbenv local 2.5.1
+$ gem install bundler -v 2.1.4
 $ bundle install
 $ bin/rails db:migrate
 $ bin/rails db:seed
