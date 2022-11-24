@@ -5,7 +5,7 @@ ARG RUBY_IMAGE=ruby:2.5.1
 #使いたいnodeのversionに置き換えてください
 ARG NODE_VERSION='16'
 #インストールするbundlerのversionに置き換えてください
-ARG BUNDLER_VERSION=2.1.4
+ARG BUNDLER_VERSION=2.3.26
 
 FROM $RUBY_IMAGE
 ARG APP_NAME
